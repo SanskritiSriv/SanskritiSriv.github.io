@@ -617,7 +617,23 @@
         padding: 1rem;
         gap: 0.8rem;
     }
-    .logo { margin-bottom: 0.2rem; }
+    .logo { 
+        /* Existing styles */
+        margin-bottom: 0.2rem;
+        
+        /* NEW: Animation settings */
+        transition: all 0.4s ease-in-out;
+        max-height: 100px; /* Allow it to exist */
+        opacity: 1;
+        overflow: hidden;  /* Ensures text doesn't spill out when shrinking */
+    }
+
+    /* NEW: The class that hides the logo */
+    .logo.hide-on-scroll {
+        max-height: 0;
+        opacity: 0;
+        margin-bottom: 0; /* Remove the gap */
+    }
     .nav-links { 
         width: 100%;
         justify-content: center;
@@ -687,6 +703,13 @@
         background: var(--bg-white);
         border: 1px solid var(--border-light);
         box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    slider-btn:hover, 
+    .slider-btn:focus, 
+    .slider-btn:active {
+        transform: none !important;
+        background-color: var(--bg-white);
     }
 
     /* --- 5. OTHER SECTIONS --- */
@@ -943,6 +966,26 @@
     </footer>
 
 <script>
+
+    /* === HIDE LOGO ON MOBILE SCROLL === */
+    window.addEventListener('scroll', function() {
+        const logo = document.querySelector('.logo');
+        
+        // Only run this logic if the screen is narrow (Mobile)
+        if (window.innerWidth <= 768) {
+            if (window.scrollY > 50) {
+                // If scrolled down more than 50px, hide the name
+                logo.classList.add('hide-on-scroll');
+            } else {
+                // If at the top, show the name
+                logo.classList.remove('hide-on-scroll');
+            }
+        } else {
+            // Ensure logo is always visible on desktop
+            logo.classList.remove('hide-on-scroll');
+        }
+    });
+    
     document.addEventListener('DOMContentLoaded', function() {
         
         /* === EXPERTISE TAB LOGIC === */
