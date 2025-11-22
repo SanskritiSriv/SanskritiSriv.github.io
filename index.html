@@ -606,144 +606,100 @@
         /* ======================================== */
     /* === RESPONSIVE FIXES (MOBILE)        === */
     /* ======================================== */
-    @media (max-width: 768px) {
-        
-        /* --- 1. FIXED NAVIGATION --- */
-        /* We stack the logo and links vertically and make links scrollable if needed */
-        .nav-container { 
-            flex-direction: column; 
-            padding: 0.8rem 1rem;
-            gap: 0.8rem;
-        }
-        
-        .logo {
-            margin-bottom: 0.2rem;
-        }
-
-        .nav-links { 
-            width: 100%;
-            justify-content: center; /* Center links */
-            flex-wrap: wrap;         /* Allow wrapping to 2 lines if needed */
-            gap: 0.8rem;
-        }
-
-        .nav-links a { 
-            font-size: 0.85rem; 
-            padding: 0.3rem 0.5rem; 
-        }
-
-        /* Make the CTA button fit in better */
-        .nav-links .cta-btn { 
-            margin-left: 0;
-            padding: 0.4rem 1rem;
-            font-size: 0.85rem;
-        }
-
-        /* --- 2. HERO SECTION --- */
-        section#about { 
-            padding: 11rem 1.5rem 4rem 1.5rem; /* More space top for the taller nav */
-            text-align: center;
-            min-height: auto; /* Allow height to fit content */
-        }
-        
-        .hero-grid-v3 {
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-        }
-
-        /* Reorder: Image Top, Text Bottom for better mobile flow */
-        .hero-image-v3-wrapper { grid-row: 1; }
-        .hero-text-v3 { grid-row: 2; }
-
-        .hero-photo-v3 { 
-            width: 70%; 
-            max-width: 280px; 
-            margin: 0 auto; 
-            display: block; 
-        }
-
-        .hero-text-v3 h1 { font-size: 2.2rem; } /* Reduced from 2.8rem */
-        .hero-hook-v3 { font-size: 1.1rem; text-align: center; }
-        .hero-subtext-v3 { font-size: 1rem; margin: 0 auto 2rem auto; }
-        
-        .hero-buttons {
-            flex-direction: column;
-            width: 100%;
-            gap: 1rem;
-        }
-        
-        .hero-btn { width: 100%; text-align: center; }
-
-        /* --- 3. EXPERTISE & TABS --- */
-        .expertise-section {
-            padding: 4rem 1.5rem;
-        }
-
-        /* Make tabs stack or scroll horizontally */
-        .services-nav {
-            gap: 0.8rem;
-        }
-        
-        .service-tab-btn { 
-            font-size: 0.9rem; 
-            padding: 0.6rem 1.2rem; 
-            flex: 1 1 auto; /* Allows buttons to grow/shrink evenly */
-        }
-
-        .service-content.tool-grid {
-            padding: 1.5rem;
-        }
-
-        /* --- 4. TESTIMONIALS --- */
-        .testimonials-section {
-            padding: 4rem 1rem;
-        }
-        
-        .testimonials-grid { 
-            padding: 0 0 1rem 0; 
-            gap: 1rem;
-        }
-
-        .testimonial-card { 
-            flex: 0 0 85vw; /* Shows 85% of card so user knows to scroll */
-            margin-right: 0;
-        }
-
-        /* Hide arrows on mobile, use swipe natural scrolling */
-        .slider-controls { display: none; } 
-
-        /* --- 5. BEYOND WORK --- */
-        #beyond-work {
-            margin: 2rem 1rem;
-            padding: 4rem 1.5rem;
-            min-height: auto;
-            background-size: cover; /* Fixes the zoom issue */
-        }
-        #beyond-work h2 { font-size: 2rem; }
-
-        /* --- 6. CONTACT SECTION (CRITICAL FIX) --- */
-        .contact-section-redesigned {
-            padding: 3rem 1rem;
-        }
-
-        .contact-container { 
-            grid-template-columns: 1fr; 
-            padding: 2rem 1.5rem; /* Drastically reduced padding */
-            text-align: center; 
-            gap: 2rem;
-        }
-        
-        .contact-text h2 { font-size: 2rem; }
-        
-        /* Make buttons full width */
-        .contact-links .connect-grid { width: 100%; }
-        .connect-btn { width: 100%; justify-content: center; }
-
-        /* --- 7. GLOBAL FONT ADJUSTMENTS --- */
-        h1 { font-size: 2.2rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
+    /* ======================================== */
+/* === RESPONSIVE FIXES (MOBILE)        === */
+/* ======================================== */
+@media (max-width: 768px) {
+    
+    /* --- 1. FIXED NAVIGATION --- */
+    .nav-container { 
+        flex-direction: column; 
+        padding: 1rem;
+        gap: 0.8rem;
     }
+    .logo { margin-bottom: 0.2rem; }
+    .nav-links { 
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    .nav-links a { font-size: 0.85rem; padding: 0.3rem 0.5rem; }
+    .nav-links .cta-btn { margin-left: 0; padding: 0.4rem 1rem; font-size: 0.85rem; }
+
+    /* --- 2. HERO SECTION (Space Fix) --- */
+    section#about { 
+        /* INCREASED padding-top from 11rem to 14rem to clear the taller nav */
+        padding: 14rem 1.5rem 4rem 1.5rem; 
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-grid-v3 {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .hero-image-v3-wrapper { grid-row: 1; }
+    .hero-text-v3 { grid-row: 2; }
+    .hero-photo-v3 { width: 70%; max-width: 280px; margin: 0 auto; display: block; }
+    .hero-text-v3 h1 { font-size: 2.2rem; }
+    .hero-hook-v3 { font-size: 1.1rem; text-align: center; }
+    .hero-subtext-v3 { font-size: 1rem; margin: 0 auto 2rem auto; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
+    .hero-btn { width: 100%; text-align: center; }
+
+    /* --- 3. EXPERTISE & TABS --- */
+    .expertise-section { padding: 4rem 1.5rem; }
+    .services-nav { gap: 0.8rem; }
+    .service-tab-btn { font-size: 0.9rem; padding: 0.6rem 1.2rem; flex: 1 1 auto; }
+    .service-content.tool-grid { padding: 1.5rem; }
+
+    /* --- 4. TESTIMONIALS (Scroll Fix) --- */
+    .testimonials-section { padding: 4rem 1rem; }
+    
+    .testimonials-grid { 
+        padding: 0 10vw; /* Puts the active card in the center */
+        gap: 1rem;
+        scroll-snap-type: x mandatory; /* Forces the card to snap to center */
+    }
+
+    .testimonial-card { 
+        /* Make card slightly smaller than screen width so the next one "peeks" out */
+        flex: 0 0 80vw; 
+        width: 80vw;
+        margin-right: 0;
+        scroll-snap-align: center; /* Snaps card to center of screen */
+    }
+
+    /* RE-ENABLE BUTTONS FOR MOBILE */
+    .slider-controls { 
+        display: flex; 
+        justify-content: center;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    } 
+
+    .slider-btn {
+        position: static; /* Remove floating positioning */
+        transform: none;
+        width: 50px; 
+        height: 50px; /* Big touch target */
+        background: var(--bg-white);
+        border: 1px solid var(--border-light);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* --- 5. OTHER SECTIONS --- */
+    #beyond-work { margin: 2rem 1rem; padding: 4rem 1.5rem; min-height: auto; background-size: cover; }
+    #beyond-work h2 { font-size: 2rem; }
+    .contact-section-redesigned { padding: 3rem 1rem; }
+    .contact-container { grid-template-columns: 1fr; padding: 2rem 1.5rem; text-align: center; gap: 2rem; }
+    .contact-links .connect-grid { width: 100%; }
+    .connect-btn { width: 100%; justify-content: center; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+}
     </style>
 </head>
 <body>
