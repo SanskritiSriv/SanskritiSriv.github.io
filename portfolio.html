@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti Srivastava - Product & Program Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ======================================== */
+        /* === PRO REDESIGN THEME: V-DYNAMIC    === */
+        /* ======================================== */
+
+        :root {
+            --bg-white: #fdfdfc;         
+            --bg-light-grey: #f4f3f1;    
+            --text-dark: #1a1a1a;         
+            --text-grey: #5c5c5c;         
+            --accent-gold: #ad8a4c;       
+            --accent-gold-darker: #9a7943; 
+            --accent-red: #941a2f;         
+            --border-light: #e5e5e5;      
+            
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            
+            --shadow-sm: 0 4px 10px rgba(0,0,0,0.04);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.07);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+            
+            --glow-red: 0 0 35px rgba(148, 26, 47, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            color: var(--text-grey);
+        }
+
+        h1, h2, h3, .logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* ======================================== */
+        /* === 1. "DYNAMIC HERO" SECTION        === */
+        /* ======================================== */
+        .hero-section-v3 {
+            padding: 12rem 2rem 10rem 2rem;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-grid-v3 {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text-v3 h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .hero-hook-v3 {
+            font-family: var(--font-body);
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text-grey);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-hook-v3 strong {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        .hero-subtext-v3 {
+            font-size: 1.1rem;
+            color: var(--text-grey);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-mantra-v3 {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--accent-gold);
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        
+        .hero-btn {
+            font-family: var(--font-body);
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .hero-btn.primary {
+            background: var(--accent-gold);
+            color: white;
+            box-shadow: 0 8px 20px rgba(173, 138, 76, 0.3);
+        }
+        .hero-btn.secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--border-light);
+        }
+        .hero-btn.primary:hover {
+            background: var(--accent-gold-darker);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(173, 138, 76, 0.4);
+        }
+        .hero-btn.secondary:hover {
+            background: var(--bg-light-grey);
+            border-color: var(--text-grey);
+        }
+
+        .hero-image-v3-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-photo-v3 {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+            position: relative; 
+            z-index: 2;
+            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+        }
+
+        .hero-image-v3-wrapper:hover .hero-photo-v3 {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+        }
+
+        .hero-decorative-blob {
+            position: absolute;
+            z-index: 1;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--accent-gold) 0%, transparent 70%);
+            opacity: 0.25;
+            filter: blur(80px);
+            animation: pulseBlob 15s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseBlob {
+            0%   { transform: scale(1)   translate(0, 0)   rotate(0deg); }
+            50%  { transform: scale(1.2) translate(20px, -30px) rotate(90deg); }
+            100% { transform: scale(1)   translate(0, 0)   rotate(0deg); }
+        }
+
+        /* ======================================== */
+        /* === 2. REDESIGNED NAVIGATION         === */
+        /* ======================================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 253, 252, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .nav-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        
+        .logo { font-size: 1.5rem; color: var(--accent-red); }
+        
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--text-dark); 
+            font-weight: 500; 
+            transition: color 0.3s ease; 
+            position: relative; 
+            padding: 5px 0;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover { color: var(--accent-red); }
+
+        .nav-links a.active {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+        
+        .nav-links .cta-btn {
+            background-color: var(--accent-red);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+            box-shadow: 0 5px 15px rgba(148, 26, 47, 0.2);
+        }
+        
+        .nav-links .cta-btn:hover {
+            background-color: #7a1627;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(148, 26, 47, 0.3);
+        }
+
+        /* Standard Section Styling */
+        section { padding: 8rem 2rem 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+        section#about { 
+            padding: 12rem 2rem 10rem 2rem;
+        }
+
+
+        /* ======================================== */
+        /* === 3. REDESIGNED EXPERTISE (TABS)   === */
+        /* ======================================== */
+        .expertise-section {
+    background-color: var(--bg-light-grey);
+    /* padding: 6rem 2rem; */ /* <-- OLD */
+    padding: 6rem 2rem 4rem 2rem; /* <-- NEW (Top=6, R/L=2, Bottom=4) */
+}
+        
+        .expertise-section h2 {
+            font-size: 2.5rem; 
+            text-align: center; 
+            margin-bottom: 1rem; 
+        }
+
+        .services-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .service-tab-btn {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-grey);
+            background: transparent;
+            border: 2px solid var(--border-light);
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .service-tab-btn:hover {
+            background: var(--bg-white);
+            color: var(--text-dark);
+            border-color: var(--accent-gold);
+        }
+        .service-tab-btn.active {
+            background: var(--accent-gold);
+            color: white;
+            border-color: var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(173, 138, 76, 0.3);
+        }
+
+        .service-content-wrapper {
+            position: relative;
+        }
+        .service-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .service-content.active {
+            display: block;
+            opacity: 1;
+            display: grid;
+            gap: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .service-content.fulltime-grid {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+        .service-content.freelance-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        .service-card { 
+            background: var(--bg-white); 
+            border-radius:16px; 
+            padding:2rem; 
+            box-shadow: var(--shadow-md); 
+            transition: all 0.3s ease; 
+            cursor:pointer; 
+            border: 2px solid transparent;
+            text-decoration: none; 
+            color: inherit; 
+            display: block; 
+        }
+        
+        .service-card:hover { 
+            transform:translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08), var(--glow-red);
+            border-color: var(--accent-red);
+        }
+        
+        .service-card h4 {
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+    
+    /* --- ADD THESE LINES --- */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ----------------------- */
+}
+
+/* --- ADD THIS NEW STYLE BLOCK --- */
+.card-arrow {
+    font-size: 1.1rem;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(5px);
+}
+/* -------------------------------- */
+        .freelance-card {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+        }
+        
+        .and-more-text {
+    grid-column: 1 / -1; 
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-grey);
+    
+    /* OLD: margin-top: 1.5rem; */
+    
+    /* NEW: Use a negative margin to pull the text up 
+       and counteract the 2rem grid-gap. */
+    margin-top: -1.5rem; 
+}
+        
+        .skills-section { border-top:1px solid var(--border-light); padding-top:1rem; margin-top:1rem; }
+        .skills-section h5 { font-family: var(--font-body); font-size:0.9rem; color: var(--text-grey); margin-bottom:0.5rem; font-weight:600; }
+        .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
+        .skill-tag { background: var(--border-light); color: var(--text-grey); padding: 0.25rem 0.7rem; border-radius:20px; font-size: 0.75rem; font-weight:500; }
+        
+        /* ======================================== */
+        /* === 3.B. TOOLS & TECH TAB STYLING    === */
+        /* ======================================== */
+
+        /* This styles the main container for the tags */
+        .service-content.tool-grid {
+            display: flex; /* This is NOT 'grid', 'flex' is better here */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            
+            /* We add a nice wrapper box for the tags */
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* This styles each individual tag */
+        /* This styles each individual tag */
+/* This styles each individual tag */
+.tool-tag {
+    background: var(--bg-light-grey);
+    color: var(--text-dark);
+    padding: 0.6rem 1.35rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1.5px solid var(--accent-red);
+    box-shadow: var(--shadow-md); /* <-- ADD THIS LINE */
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+        .tool-tag:hover {
+            background: var(--accent-gold);
+            color: white;
+            border-color: var(--accent-gold-darker);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(173, 138, 76, 0.2);
+        }
+
+        /* === This is an important fix === */
+        /* We need to override the default 'display: grid' 
+           for the .service-content.active when it's our new tool-grid */
+        .service-content.tool-grid.active {
+            display: flex;
+        }
+
+        /* ======================================== */
+        /* === 4. TESTIMONIALS                  === */
+        /* ======================================== */
+        .testimonials-section { 
+            padding: 4rem 2rem;
+            position: relative; 
+            max-width: 1200px; 
+        }
+        .testimonials-section h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; padding: 0; }
+        .testimonial-slider-wrapper { position: relative; mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); }
+        .testimonials-grid { display: flex; overflow-x: auto; gap: 2rem; padding: 1rem 40px; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
+        .testimonials-grid::-webkit-scrollbar { display: none; }
+        .testimonial-card { background: var(--bg-light-grey); padding: 2rem; border-radius: 16px; box-shadow: none; scroll-snap-align: start; flex: 0 0 350px; border: 1px solid var(--border-light); }
+        .testimonial-header { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
+        .testimonial-photo { width:50px; height:50px; border-radius:50%; object-fit:cover; }
+        .testimonial-info h5 { font-family: var(--font-body); font-weight:600; color: var(--text-dark); }
+        .testimonial-info p { font-size:0.9rem; color: var(--text-grey); }
+        .service-tag { display:inline-block; background: var(--accent-red); color:white; padding:0.3rem 0.8rem; border-radius:12px; font-size:0.8rem; margin-bottom:1rem; }
+        .testimonial-text { color: var(--text-grey); font-style:italic; }
+        
+        .slider-btn { position: absolute; top: 55%; transform: translateY(-50%); z-index: 10; background-color: var(--bg-white); border: 1px solid var(--border-light); color: var(--text-grey); width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .slider-btn:hover { background-color: var(--accent-gold); color: white; transform: translateY(-50%) scale(1.1); }
+        #prevBtn { left: 20px; }
+        #nextBtn { right: 20px; }
+
+        /* ======================================== */
+        /* === 5. "BEYOND WORK" BANNER SECTION  === */
+        /* ======================================== */
+        #beyond-work {
+            max-width: 1200px; 
+            margin: 2rem auto;
+            border-radius: 24px; 
+            overflow: hidden;
+            /* Adjusted padding to make it slightly smaller */
+            padding: 7rem 2rem; /* Was 8rem, now 7rem (approx 0.5cm less on top/bottom) */
+            min-height: 50vh; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            position: relative;
+            
+            background-image:
+                linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.75)),
+                url('./images/banner.png');
+            
+            background-size: 125%;
+            background-position: center center;
+        }
+
+        #beyond-work h2 {
+            font-size: 3rem;
+            color: var(--bg-white); 
+            font-weight: 700; 
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .beyond-work-text {
+            font-size: 1.25rem;
+            color: var(--bg-light-grey);
+            max-width: 700px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .beyond-work-text strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        #beyond-work-btn {
+            border-color: rgba(255, 255, 255, 0.7);
+            color: var(--bg-white);
+            background: transparent;
+        }
+        
+        #beyond-work-btn:hover {
+            background: var(--bg-white);
+            color: var(--text-dark);
+            border-color: var(--bg-white);
+        }
+
+
+        /* ======================================== */
+        /* === 6. CONTACT                       === */
+        /* ======================================== */
+        .contact-section-redesigned {
+            background-color: var(--bg-light-grey); 
+            padding: 6rem 2rem;
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: var(--bg-white); 
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contact-text h2 { font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; }
+        .contact-text p { font-size: 1.1rem; color: var(--text-grey); line-height: 1.7; }
+        .contact-links .connect-grid { display: flex; flex-direction: column; gap: 1.5rem; align-items: stretch; margin-bottom: 0; }
+        .contact-links .connect-btn { font-family: var(--font-body); justify-content: center; padding: 1rem; font-size: 1.2rem; border-radius: 12px; }
+        .connect-btn { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.1rem; font-weight: 600; text-decoration: none; color: white; padding: 0.8rem 1.8rem; border-radius: 12px; transition: all 0.3s ease; border: none; }
+        .connect-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .connect-btn i { font-size: 1.4rem; }
+        .email-btn { background-color: var(--accent-gold); }
+        .linkedin-btn { background-color: var(--text-dark); }
+        .instagram-btn { background-color: var(--accent-red); }
+
+        /* ======================================== */
+        /* === OTHER (Modal, Footer, ScrollTop) === */
+        /* ======================================== */
+
+        .modal { display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
+        .modal-content { background: var(--bg-white); margin:5% auto; padding:2rem; border-radius:16px; width:90%; max-width:500px; }
+        .modal-content h2 { color: var(--text-dark); }
+        .close { color:#aaa; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+        .close:hover { color: var(--text-dark); }
+        .form-group { margin-bottom:1rem; }
+        .form-group label { display:block; margin-bottom:0.5rem; font-weight:600; color: var(--text-dark); }
+        .form-group input, .form-group textarea { font-family: var(--font-body); width:100%; padding:0.75rem; border:2px solid var(--border-light); background-color: var(--bg-white); color: var(--text-dark); border-radius:8px; font-size:1rem; transition:border-color 0.3s ease; }
+        .form-group input:focus, .form-group textarea:focus { outline:none; border-color: var(--accent-gold); }
+        .form-group textarea { resize:vertical; min-height:120px; }
+        .submit-btn { font-family: var(--font-body); background: var(--accent-gold); color:white; border:none; padding:0.75rem 2rem; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; width:100%; }
+        .submit-btn:hover { background: var(--accent-gold-darker); }
+
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
+
+        #scrollTopBtn { display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; border: none; outline: none; background-color: var(--accent-gold); color: white; cursor: pointer; padding: 0; border-radius: 50%; font-size: 18px; width: 50px; height: 50px; text-align: center; line-height: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+        #scrollTopBtn:hover { background-color: var(--accent-gold-darker); transform: translateY(-3px); }
+
+        .site-footer { text-align: center; padding: 2.5rem; background: var(--bg-light-grey); border-top: 1px solid var(--border-light); color: var(--text-grey); }
+        .footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+        .footer-socials a { color: var(--text-grey); font-size: 1.3rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-gold); }
+        .footer-feedback-link { font-size: 0.9rem; color: var(--text-grey); cursor: pointer; text-decoration: underline; margin-top: 1rem; transition: color 0.3s ease; }
+        .footer-feedback-link:hover { color: var(--accent-gold); }
+
+        /* ======================================== */
+        /* === RESPONSIVE                       === */
+        /* ======================================== */
+        @media (max-width:768px) {
+            .nav-container { padding: 0 1rem; }
+            
+            .nav-links { gap:0.5rem; }
+            .nav-links a { font-size: 0.8rem; padding: 5px; }
+            .nav-links .cta-btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; margin-left: 0.5rem; }
+            .logo { font-size: 1.2rem; }
+            
+            section { padding: 4rem 1rem; }
+            section#about { 
+                padding: 8rem 1rem 6rem 1rem;
+                text-align: center;
+            }
+            
+            .hero-grid-v3 {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-text-v3 h1 { font-size: 2.8rem; }
+            .hero-hook-v3 { font-size: 1.2rem; }
+            .hero-mantra-v3 { margin: 2rem auto; }
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            .hero-image-v3-wrapper { grid-row: 1; }
+            .hero-text-v3 { grid-row: 2; }
+            .hero-decorative-blob { width: 250px; height: 250px; filter: blur(60px); }
+            .hero-photo-v3 { width: 80%; max-width: 300px; }
+
+            .service-tab-btn { font-size: 0.9rem; padding: 0.6rem 1.2rem; }
+            .service-content.fulltime-grid, .service-content.freelance-grid { grid-template-columns: 1fr; }
+
+            .testimonial-card { flex: 0 0 90%; }
+            .testimonials-grid { padding: 0 1rem 1rem 1rem; }
+            .testimonial-slider-wrapper { mask-image: none; -webkit-mask-image: none; }
+            
+            .slider-btn { position: static; transform: none; width: 40px; height: 40px; }
+            .slider-controls { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+
+            /* === BEYOND WORK RESPONSIVE (BANNER) === */
+            #beyond-work {
+                padding: 5.5rem 1.5rem; /* Adjusted for mobile */
+                min-height: 40vh;
+            }
+            #beyond-work h2 {
+                font-size: 2.2rem;
+            }
+            .beyond-work-text {
+                font-size: 1.1rem;
+            }
+
+            .contact-container { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; text-align: center; }
+            .contact-text h2 { font-size: 2.2rem; }
+            
+            h1 { font-size: 2.5rem; }
+            h2, .testimonials-section h2, .contact-text h2, #beyond-work h2 { font-size: 2.2rem; }
+            h3 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sanskriti Srivastava</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#beyond-work">Beyond Work</a></li>
+                <li><a href="#contact" class="cta-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="hero-section-v3">
+        <div class="hero-grid-v3">
+            
+            <div class="hero-text-v3">
+                <h1 class="fade-in-up">
+                    Building with Intent, Driven by Curiosity.
+                </h1>
+                
+                <p class="hero-hook-v3 fade-in-up" data-delay="200">
+                    Ever seen brilliant ideas and talented people, but the outcome still feels off?
+                    <strong>I’m here to change the story.</strong>
+                </p>
+
+                <p class="hero-subtext-v3 fade-in-up" data-delay="400">
+                    A Final-year B.Tech IT student, With 1.5+ years in program management; I don’t just execute—I dig into problems, take ownership, and solve them. Human empathy drives me, helping me understand users and build a true sense of belonging for customers and teams alike.
+                </p>
+
+                <p class="hero-mantra-v3 fade-in-up" data-delay="500">
+                    "Why put a limit, when I can be limitless?"
+                </p>
+
+                <div class="hero-buttons fade-in-up" data-delay="600">
+                   
+                    <a href="#expertise" class="hero-btn secondary">See My Expertise</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-v3-wrapper fade-in-up" data-delay="300">
+                <div class="hero-decorative-blob"></div>
+                
+                <img src="images/Portfolio.png" alt="Sanskriti Srivastava" class="hero-photo-v3">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="expertise" class="expertise-section">
+        <h2 class="fade-in-up">My Expertise</h2>
+
+        <div class="services-nav fade-in-up">
+            <button class="service-tab-btn active" data-tab="fulltime">Full-Time Roles</button>
+            <button class="service-tab-btn" data-tab="freelance">Freelance Services</button>
+            <button class="service-tab-btn" data-tab="tools">Tools & Tech</button>
+        </div>
+
+        <div class="service-content-wrapper">
+
+            <div id="fulltime" class="service-content active fulltime-grid">
+                <a href="projectmanagementpage.html" class="service-card fade-in-up">
+                    <h4>Project Management <i class="fas fa-arrow-right card-arrow"></i></h4>
+                    <div class="skills-section">
+                        <h5>Skills:</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Strategization</span>
+                            <span class="skill-tag">Stakeholder Management</span>
+                            <span class="skill-tag">Process Management</span>
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Cross functional teams</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="productmanagementpage.html" class="service-card fade-in-up">
+                    <h4>Product Management <i class="fas fa-arrow-right card-arrow"></i></h4>
+                    <div class="skills-section">
+                        <h5>Skills:</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">Research & Data Analysis</span>
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Prioritization</span>
+                            <span class="skill-tag">PRD Writing</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="communitymanagementpage.html" class="service-card fade-in-up">
+                    <h4>Community Management <i class="fas fa-arrow-right card-arrow"></i></h4>
+                    <div class="skills-section">
+                        <h5>Skills:</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Community Strategy</span>
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Event Planning</span>
+                            <span class="skill-tag">Content Strategy</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <p class="and-more-text fade-in-up">and more...</p>
+                
+            </div>
+
+            <div id="freelance" class="service-content freelance-grid">
+                <a href="contentwriting.html" class="service-card freelance-card fade-in-up">
+                    <h4>Content Writing</h4>
+                </a>
+                <a href="linkedin.html" class="service-card freelance-card fade-in-up">
+                    <h4>LinkedIn Profile Optimization</h4>
+                </a>
+                <a href="ghostwriting.html" class="service-card freelance-card fade-in-up">
+                    <h4>Ghost Writing</h4>
+                </a>
+                <a href="voiceover.html" class="service-card freelance-card fade-in-up">
+                    <h4>Voice Over</h4>
+                </a>
+                <a href="prd.html" class="service-card freelance-card fade-in-up">
+                    <h4>PRD & User Research Consultation</h4>
+                </a>
+                
+                <p class="and-more-text fade-in-up">and more...</p>
+                
+            </div>
+
+            <div id="tools" class="service-content tool-grid">
+                <span class="tool-tag">Figma</span>
+                <span class="tool-tag">Notion</span>
+                <span class="tool-tag">Clickup</span>
+                
+                <span class="tool-tag">Confluence</span>
+                <span class="tool-tag">HTML</span>
+                <span class="tool-tag">MySQL</span>
+                <span class="tool-tag">CSS</span>
+                
+                <span class="tool-tag">Javascript</span>
+                <span class="tool-tag">Canva</span>
+                <span class="tool-tag">Google Workspace</span>
+                <span class="tool-tag">Google Analytics</span>
+                
+                <span class="tool-tag">Excel</span>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2 class="fade-in-up">What People Say</h2>
+        
+        <div class="testimonial-slider-wrapper">
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <div class="testimonial-card fade-in-up">
+                    <span class="service-tag">Linkedin Optimisation</span>
+                    <div class="testimonial-header">
+                        <img src="images/Samriddh-verma.png" alt="Client" class="testimonial-photo">
+                        <div class="testimonial-info"><h5>Samriddh Verma</h5><p>CTO, Kandid</p></div>
+                    </div>
+                    <p class="testimonial-text">"Sanskriti completely transformed my LinkedIn profile... Her guidance and attention to detail made the process effortless and impactful."</p>
+                </div>  
+                <div class="testimonial-card fade-in-up">
+                    <span class="service-tag">Program Management</span>
+                    <div class="testimonial-header">
+                        <img src="images/VivekGupta .png" alt="Client" class="testimonial-photo">
+                        <div class="testimonial-info"><h5>Vivek Gupta</h5><p>CEO, AlgoZenith Technologies</p></div>
+                    </div>
+                    <p class="testimonial-text">"Exceptional at strategizing... Sanskriti independently led a wide-reaching campus connection initiative, delivering outstanding results and demonstrating remarkable ownership"</p>
+                </div>  
+                <div class="testimonial-card fade-in-up">
+                    <span class="service-tag">Community Management</span>
+                    <div class="testimonial-header">
+                        <img src="images/Prayag-Dwivedi.png" alt="Client" class="testimonial-photo">
+                        <div class="testimonial-info"><h5>Prayag Dwivedi</h5><p>Community Manager, AlgoZenith Technologies</p></div>
+                    </div>
+                    <p class="testimonial-text">"A remarkable community manager who brings creativity, initiative, and a proactive mindset to every project... an invaluable asset to any community."</p>
+                </div>   
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="beyond-work">
+        <h2 class="fade-in-up">Who Am I Beyond Work?</h2>
+        
+        <p class="beyond-work-text fade-in-up" data-delay="200">
+            I'm a firm believer that a well-rounded life fuels creativity and empathy. Whether it's <strong>public speaking</strong>, a good <strong>dancing</strong> session, planning my next  <strong>youtube video</strong>, or a cozy evening with my <strong>books and food</strong>, these are the moments that recharge me.
+        </p>
+        
+        <a href="beyondwork.html" target="_blank" class="hero-btn secondary fade-in-up" data-delay="400" id="beyond-work-btn">
+            See My Creative Side
+        </a>
+    </section>
+
+    <section id="contact" class="contact-section-redesigned">
+        <div class="contact-container fade-in-up">
+            <div class="contact-text">
+                <h2>Let's Connect</h2>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
+            </div>
+            <div class="contact-links">
+                <div class="connect-grid">
+                    <a href="mailto:sanskritisrivastav2@gmail.com" class="connect-btn email-btn"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://www.linkedin.com/in/sanskritisriv/" target="_blank" class="connect-btn linkedin-btn"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                    <a href="https://www.instagram.com/sanskritisriv_?igsh=MTJ3NDR0MGx2Y3V5dw==" target="_blank" class="connect-btn instagram-btn"><i class="fab fa-instagram"></i> Follow on Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <a href="#about" id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('feedbackModal')">&times;</span>
+            <h2>Leave Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group"><label for="feedback-name">Name</label><input type="text" id="feedback-name" name="name" required></div>
+                <div class="form-group"><label for="feedback-text">Feedback</label><textarea id="feedback-text" name="feedback" required></textarea></div>
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2025 Sanskriti Srivastava. All Rights Reserved.</p>
+        <div class="footer-socials">
+            <a href="mailto:sanskritisrivastav2@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https.linkedin.com/in/sanskritisriv/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sanskritisriv_?igsh=MTJ3NDR0MGx2Y3V5dw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@SanskritiSriv" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-feedback-link" onclick="openModal('feedback')">Have feedback on this site?</p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        /* === EXPERTISE TAB LOGIC === */
+        const tabButtons = document.querySelectorAll('.service-tab-btn');
+        const tabContents = document.querySelectorAll('.service-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        /* === Animate on Scroll Logic === */
+        const fadeUpObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-delay') || 0;
+                    
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, parseInt(delay));
+                    
+                    fadeUpObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 }); 
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            fadeUpObserver.observe(element);
+        });
+
+        /* === Nav Active State Logic === */
+        const navLinks = document.querySelectorAll('.nav-links a:not(.cta-btn)');
+        const sectionsToObserve = document.querySelectorAll('#about, #expertise, #testimonials, #beyond-work, #contact');
+        
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { 
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0 
+        });
+
+        sectionsToObserve.forEach(section => {
+            navObserver.observe(section);
+        });
+        
+    }); // End of DOMContentLoaded
+    
+    
+    /* === MODAL & FORM LOGIC === */
+    function openModal(type) {
+        if (type === 'feedback') {
+            document.getElementById('feedbackModal').style.display = 'block';
+        }
+    }
+    function closeModal(modalId) { 
+        document.getElementById(modalId).style.display = 'none'; 
+    }
+    window.onclick = function(event) {
+        const f = document.getElementById('feedbackModal');
+        if (event.target === f) f.style.display = 'none';
+    }
+    
+    const feedbackForm = document.getElementById('feedbackForm');
+    if(feedbackForm) {
+        const submitButton = feedbackForm.querySelector('button[type="submit"]');
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxahBi8AoFdavfeGaH4netMgELrnrn_w0zitg164EYIW-T669yfnhK8TGuqHgi3KZm0/exec";
+
+        feedbackForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+            const formData = new FormData(feedbackForm);
+            fetch(WEB_APP_URL, { method: 'POST', body: formData })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert('Thank you for your feedback!');
+                    closeModal('feedbackModal');
+                    feedbackForm.reset();
+                } else { throw new Error(data.error || 'Unknown error occurred.'); }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. ' + error.message);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit Feedback";
+            });
+        });
+    }
+
+    /* === TESTIMONIAL SLIDER LOGIC === */
+    const grid = document.getElementById('testimonialsGrid');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    if(grid && prevBtn && nextBtn) { 
+        nextBtn.addEventListener('click', () => {
+            const card = grid.querySelector('.testimonial-card');
+            if(!card) return;
+            const gap = parseFloat(window.getComputedStyle(grid).gap);
+            const scrollAmount = card.offsetWidth + gap;
+            grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+            const card = grid.querySelector('.testimonial-card');
+            if(!card) return;
+            const gap = parseFloat(window.getComputedStyle(grid).gap);
+            const scrollAmount = card.offsetWidth + gap;
+            grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    /* === SCROLL TO TOP LOGIC === */
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    if(scrollTopBtn) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+    }
+</script>
+</body>
+</html>
