@@ -79,6 +79,11 @@
             font-size: 1.25rem; 
             color: white;
             text-decoration: none;
+            line-height: 1.2; /* Better spacing if stacked */
+        }
+        /* Default space between names on desktop */
+        .nav-logo span {
+            margin-right: 5px;
         }
         
         .back-home-fixed {
@@ -598,6 +603,12 @@
             box-shadow: 0 10px 20px rgba(173, 138, 76, 0.3);
         }
 
+        /* X (Twitter) Brand Hover */
+        .social-btn.x-twitter:hover {
+            background: #14171A; /* Twitter/X Dark */
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
 
         /* =========================================
            RESPONSIVE
@@ -607,7 +618,31 @@
             * { cursor: auto; }
 
             .creative-nav { padding: 1.5rem; }
-            .back-home-fixed { top: 1.5rem; right: 1.5rem; }
+            
+            /* --- FIXED NAV OVERLAP --- */
+            /* 1. Stack the name */
+            .nav-logo {
+                display: flex;
+                flex-direction: column;
+            }
+            .nav-logo span {
+                display: block;
+                margin-right: 0;
+            }
+
+            /* 2. Adjust Fixed Link to not touch name */
+            .back-home-fixed { 
+                top: 1.5rem; 
+                right: 1.5rem; 
+                max-width: 45%; /* Limits width so it doesn't cross left */
+                text-align: right;
+            }
+            .back-home {
+                font-size: 0.65rem; /* Slightly smaller to fit */
+                letter-spacing: 1px;
+            }
+            /* ------------------------- */
+
             .nav-logo { font-size: 1rem; }
             
             .hero-title { font-size: 3.5rem; }
@@ -696,7 +731,10 @@
     <div class="cursor"></div>
 
     <nav class="creative-nav">
-        <a href="" class="nav-logo">Sanskriti Srivastava</a>
+        <a href="" class="nav-logo">
+            <span>Sanskriti</span>
+            <span>Srivastava</span>
+        </a>
     </nav>
     <div class="back-home-fixed">
         <a href="https://sanskritisriv.me/" class="back-home" data-hover-text="Return to safety">Go to Professional Portfolio</a>
@@ -753,7 +791,7 @@
                     <p>Whether it's holding a mic to share ideas or hitting the dance floor to let loose, I believe in expression without filters. The confidence I build here is exactly what I bring into every boardroom.</p>
                 </div>
                 <div class="collage-wrapper">
-                     <img src="dance.jpg" alt="Dancing" class="collage-img img-dance" data-hover-text="Vibe">
+                      <img src="dance.jpg" alt="Dancing" class="collage-img img-dance" data-hover-text="Vibe">
                     <img src="publicspeaking.jpg" alt="Speaking" class="collage-img img-speak" data-hover-text="Lead">
                 </div>
             </div>
@@ -909,6 +947,10 @@
                 <a href="https://www.youtube.com/@SanskritiSriv" target="_blank" class="social-btn yt" data-hover-text="YouTube">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
+
+                <a href="https://x.com/SanskritiSriv_?t=Qgo7gays6JMKnFBD7P9QQQ&s=09" target="_blank" class="social-btn x-twitter" data-hover-text="X / Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
              </div>
         </div>
     </section>
@@ -966,7 +1008,7 @@
                 
                 // Reset if reached end (simulate infinite)
                 if(bookScroller.scrollLeft >= (bookScroller.scrollWidth - bookScroller.clientWidth)) {
-                     bookScroller.scrollLeft = 0;
+                      bookScroller.scrollLeft = 0;
                 }
             }
             animationId = requestAnimationFrame(autoScrollBooks);
